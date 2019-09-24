@@ -6,7 +6,7 @@ import java.io.*;
 public class Convector {
 
     public static File convert(File video, String videoName) {
-        String mp3File = "C:\\Users\\ekate\\Music\\" + videoName + "Convert.mp3";
+        String mp3File = videoName + "Convert.mp3";
 
         File newFile = new File(mp3File);
 

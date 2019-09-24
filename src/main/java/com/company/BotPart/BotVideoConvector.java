@@ -111,7 +111,7 @@ public class BotVideoConvector extends TelegramLongPollingBot {
             URL telegramS = new URL(filePath);
             System.out.println(filePath);
             ReadableByteChannel rbc = Channels.newChannel(telegramS.openStream());
-            File basic = new File("C:\\Users\\ekate\\Videos\\user" + userName.toUpperCase() + ".mp4");
+            File basic = new File( userName.toUpperCase() + ".mp4");
             FileOutputStream fos = new FileOutputStream(basic);
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
             File result = Convector.convert(basic, "user" + userName.toUpperCase());

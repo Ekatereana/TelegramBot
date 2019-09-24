@@ -18,11 +18,11 @@ public class YouTubeLoader {
         try {
 
 
-             myPath = "C:\\Users\\ekate\\Music\\" + Jsoup.connect(url).get().title().replace(" ", "") +".mp3";
+             myPath = Jsoup.connect(url).get().title().replace(" ", "") +".mp3";
             ProcessBuilder pb = new ProcessBuilder("C:\\Users\\ekate\\youtube-dl.exe",
                     "-x", "--audio-format", "mp3", "--audio-quality",
                     "0", "-o", myPath, url);
-            pb.directory(new File("C:\\Users\\ekate"));
+            pb.directory(new File(""));
             pb.redirectErrorStream(true);
 
             Process p = pb.start();
