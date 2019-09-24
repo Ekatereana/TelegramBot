@@ -22,7 +22,7 @@ public class YouTubeLoader {
             ProcessBuilder pb = new ProcessBuilder("C:\\Users\\ekate\\youtube-dl.exe",
                     "-x", "--audio-format", "mp3", "--audio-quality",
                     "0", "-o", myPath, url);
-            pb.directory(new File(""));
+            pb.directory(new File("."));
             pb.redirectErrorStream(true);
 
             Process p = pb.start();
