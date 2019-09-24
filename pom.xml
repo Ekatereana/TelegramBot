@@ -16,29 +16,7 @@
                     <source>9</source>
                     <target>9</target>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>appassembler-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <configuration>
-                    <assembleDirectory>target</assembleDirectory>
-                    <programs>
-                        <program>
-                            <mainClass>com.home.server.Main</mainClass>
-                            <name>workerBot</name>
-                        </program>
-                    </programs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>assemble</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>3.8.1</version>
             </plugin>
 
         </plugins>
